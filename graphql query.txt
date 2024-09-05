@@ -1,0 +1,35 @@
+{
+  tournaments(
+    query: {perPage: x, filter: {past: true, hasOnlineEvents: false, videogameIds: 1386}}
+  ) {
+    nodes {
+      id
+      name
+      events(filter: {videogameId: 1386}) {
+        numEntrants
+        type
+        sets(sortType: ROUND
+        perPage: x
+        
+        ) {
+          nodes {
+            games {
+              winnerId
+              selections {
+                character {
+                  name
+                }
+                entrant {
+                  id
+                  seeds {
+                    seedNum
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
