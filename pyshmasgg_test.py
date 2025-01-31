@@ -76,7 +76,7 @@ def run_query(query, header, auto_retry):
             return None
         
 header = {
-    "Authorization": "Bearer ba4fe2c4439d5395b736af606c02c2a0",
+    "Authorization": "Bearer x",
     "Content-Type": "application/json"
 }
 response = run_query(query, header, auto_retry=True)
